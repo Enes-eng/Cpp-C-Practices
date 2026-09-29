@@ -1,0 +1,41 @@
+﻿{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: Derle ve Otomatik Calistir",
+            "type": "shell",
+            "command": "g++ -std=c++20 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" ; if ($?) { & \"${fileDirname}\\${fileBasenameNoExtension}.exe\" }",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "C: Derle ve Otomatik Calistir",
+            "type": "shell",
+            "command": "gcc \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" ; if ($?) { & \"${fileDirname}\\${fileBasenameNoExtension}.exe\" }",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
